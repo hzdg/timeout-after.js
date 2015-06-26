@@ -1,0 +1,29 @@
+{
+  "name": "timeout-after",
+  "version": "0.0.1",
+  "description": "Add a timeout to existing functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hzdg/timeout-after.js.git"
+  },
+  "keywords": [
+    "new",
+    "functional",
+    "constructors"
+  ],
+  "author": "Matthew Dapena-Tretter <m@tthewwithanm.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hzdg/timeout-after.js/issues"
+  },
+  "homepage": "https://github.com/hzdg/timeout-after.js",
+  "dependencies": {},
+  "devDependencies": {
+    "es6-promise": "^2.3.0",
+    "mocha": "^2.2.5"
+  }
+}
