@@ -1,5 +1,8 @@
 Add a timeout to an existing function.
 
+`timeout-after` uses the global `Promise` so you might have to polyfill for
+node.
+
 
 Installation
 ------------
