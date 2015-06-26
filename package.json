@@ -11,9 +11,11 @@
     "url": "git@github.com:hzdg/timeout-after.js.git"
   },
   "keywords": [
-    "new",
+    "timeout",
+    "decorator",
     "functional",
-    "constructors"
+    "promise",
+    "promises"
   ],
   "author": "Matthew Dapena-Tretter <m@tthewwithanm.com>",
   "license": "MIT",
