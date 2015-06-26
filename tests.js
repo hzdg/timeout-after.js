@@ -26,3 +26,9 @@ it('returns a correctly resolved promise if the function completes in time', fun
     .then(function(result) { assert.strictEqual(result, true); })
     .catch(assert.fail);
 });
+
+it('works with synchronous functions', function() {
+  return timeoutAfter(30, function() { return true; })()
+    .then(function(result) { assert.strictEqual(result, true); })
+    .catch(assert.fail);
+});
