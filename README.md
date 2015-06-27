@@ -31,14 +31,11 @@ const fetchWithTimeout = timeoutAfter(5000, fetch);
 }());
 ```
 
-Curries, so it can be used as a method decorator:
+It curries too:
 
 ```javascript
-class MyClass {
-  @timeoutAfter(5000)
-  async getData() {
-    let response = await fetch(...);
-    return response.body;
-  }
-}
+import timeoutAfter from 'timeout-after';
+
+const withTimeout = timeoutAfter(5000);
+const fetchWithTimeout = withTimeout(fetch);
 ```
