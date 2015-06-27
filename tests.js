@@ -18,7 +18,10 @@ function getTrue() {
 it('returns a rejected promise if the function takes too long', function() {
   return timeoutAfter(10, getTrue)()
     .then(assert.fail)
-    .catch(function(err) { assert(/timed out after 10ms/.test(err.message)); });
+    .catch(function(err) {
+      assert.equal(err.name, 'Timeout');
+      assert(/timed out after 10ms/.test(err.message));
+    });
 });
 
 it('returns a correctly resolved promise if the function completes in time', function() {

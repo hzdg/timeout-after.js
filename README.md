@@ -26,7 +26,8 @@ const fetchWithTimeout = timeoutAfter(5000, fetch);
   try {
     await fetchWithTimeout(...);
   } catch (err) {
-    console.error('Uh oh!')
+    if (err.name === 'Timeout') console.error('Uh oh! Timed out!');
+    throw err;
   }
 }());
 ```

@@ -26,7 +26,9 @@ module.exports = function timeoutAfter(ms, fn) {
         return new Promise(function(resolve, reject) {
           timeoutId = setTimeout(function() {
             if (timeoutId == null) return;
-            reject(new Error('The function ' + fn.name + ' timed out after ' + ms + 'ms.'));
+            var error = new Error('The function ' + fn.name + ' timed out after ' + ms + 'ms.');
+            error.name = 'Timeout';
+            reject(error);
           }, ms);
         });
       }
